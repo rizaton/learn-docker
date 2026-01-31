@@ -45,3 +45,23 @@ docker container create --name copy rizaton/copy
 docker container start copy
 
 docker container logs copy
+
+# Docker Ignore
+docker build -t rizaton/ignore ignore
+
+docker container create --name ignore rizaton/ignore
+
+docker container start ignore
+
+docker container logs ignore
+
+# EXPOSE Instruction
+docker build -t rizaton/expose expose
+
+docker image inspect rizaton/expose
+
+docker container create --name expose -p 8080:8080 rizaton/expose
+
+docker container start expose
+
+docker container logs expose

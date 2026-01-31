@@ -1,14 +1,14 @@
-#FROM Instruction
+# FROM Instruction
 docker build -t rizaton/from from
 
 docker image ls
 
-#RUN Instruction
+# RUN Instruction
 docker build -t rizaton/run run
 
 docker build -t rizaton/run run --progress=plain --no-cache
 
-#CMD Instruction
+# CMD Instruction
 docker build -t rizaton/command command
 
 docker image inspect rizaton/command
@@ -17,9 +17,20 @@ docker container create --name command rizaton/command
 
 docker container start command
 
-docker container logs comman
+docker container logs command
 
-#LABEL Instruction
+# LABEL Instruction
 docker build -t rizaton/label label
 
 docker image inspect rizaton/label
+
+# ADD Instruction
+docker build -t rizaton/add add
+
+docker image inspect rizaton/add
+
+docker container create --name add rizaton/add
+
+docker container start add
+
+docker container logs add

@@ -17,4 +17,9 @@ docker container create --name command rizaton/command
 
 docker container start command
 
-docker container logs command
+docker container logs comman
+
+#LABEL Instruction
+docker build -t rizaton/label label
+
+docker image inspect rizaton/label

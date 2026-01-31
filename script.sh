@@ -34,3 +34,14 @@ docker container create --name add rizaton/add
 docker container start add
 
 docker container logs add
+
+# ADD Instruction
+docker build -t rizaton/copy copy
+
+docker image inspect rizaton/copy
+
+docker container create --name copy rizaton/copy
+
+docker container start copy
+
+docker container logs copy

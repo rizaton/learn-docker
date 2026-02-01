@@ -65,3 +65,17 @@ docker container create --name expose -p 8080:8080 rizaton/expose
 docker container start expose
 
 docker container logs expose
+
+
+# ENV Instruction
+docker build -t rizaton/env env
+
+docker image inspect rizaton/env
+
+docker container create --name env --env APP_PORT=9090 -p 9090:9090 rizaton/env
+
+docker container start env
+
+docker container logs env
+
+docker container stop env

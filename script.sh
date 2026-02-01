@@ -66,7 +66,6 @@ docker container start expose
 
 docker container logs expose
 
-
 # ENV Instruction
 docker build -t rizaton/env env
 
@@ -79,3 +78,18 @@ docker container start env
 docker container logs env
 
 docker container stop env
+
+# VOLUME Instruction
+docker build -t rizaton/volume volume
+
+docker image inspect rizaton/volume
+
+docker container create --name volume -p 8080:8080 rizaton/volume
+
+docker container start volume
+
+docker container logs volume
+
+docker container stop volume
+
+docker container inspect volume

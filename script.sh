@@ -93,3 +93,16 @@ docker container logs volume
 docker container stop volume
 
 docker container inspect volume
+
+# WORKDIR Instruction
+docker build -t rizaton/workdir workdir
+
+docker container create --name workdir -p 8080:8080 rizaton/workdir
+
+docker container start workdir
+
+docker container logs workdir
+
+docker container exec -it workdir /bin/sh
+
+docker container stop workdir

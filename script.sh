@@ -119,3 +119,14 @@ docker container logs user
 docker container exec -it user /bin/sh
 
 docker container stop user
+
+# ARG Instruction
+docker build -t rizaton/arg arg --build-arg app=rizaton
+
+docker container create --name arg -p 8080:8080 rizaton/arg
+
+docker container start arg
+
+docker container exec -it arg /bin/sh
+
+docker container logs arg

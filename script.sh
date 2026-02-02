@@ -106,3 +106,16 @@ docker container logs workdir
 docker container exec -it workdir /bin/sh
 
 docker container stop workdir
+
+# WORKDIR Instruction
+docker build -t rizaton/user user
+
+docker container create --name user -p 8080:8080 rizaton/user
+
+docker container start user
+
+docker container logs user
+
+docker container exec -it user /bin/sh
+
+docker container stop user

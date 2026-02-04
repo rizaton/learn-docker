@@ -130,3 +130,12 @@ docker container start arg
 docker container exec -it arg /bin/sh
 
 docker container logs arg
+
+# HEALTHCHECK Instruction
+docker build -t rizaton/health health
+
+docker container create --name health -p 8080:8080 rizaton/health
+
+docker container start health
+
+docker container ls

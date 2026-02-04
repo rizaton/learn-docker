@@ -140,7 +140,7 @@ docker container start health
 
 docker container ls
 
-#  Instruction
+#  ENTRYPOINT Instruction
 docker build -t rizaton/entrypoint entrypoint
 
 docker image inspect rizaton/entrypoint
@@ -150,3 +150,14 @@ docker container create --name entrypoint -p 8080:8080 rizaton/entrypoint
 docker container start entrypoint
 
 docker container inspect entrypoint
+
+#  Multi Stage Build
+docker build -t rizaton/multi multi
+
+docker image ls
+
+docker container create --name multi -p 8080:8080 rizaton/multi
+
+docker container start multi
+
+docker container inspect multi

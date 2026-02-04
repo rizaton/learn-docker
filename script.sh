@@ -139,3 +139,14 @@ docker container create --name health -p 8080:8080 rizaton/health
 docker container start health
 
 docker container ls
+
+#  Instruction
+docker build -t rizaton/entrypoint entrypoint
+
+docker image inspect rizaton/entrypoint
+
+docker container create --name entrypoint -p 8080:8080 rizaton/entrypoint
+
+docker container start entrypoint
+
+docker container inspect entrypoint

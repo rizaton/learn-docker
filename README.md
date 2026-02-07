@@ -2,7 +2,7 @@
 
 This repository is a **learning-reference** for
 understanding Docker.
-It covers **Dockerfile**, and **Docker Compose**, examples.
+It covers **Docker Basic**, **Dockerfile**, and **Docker Compose** examples.
 
 ---
 

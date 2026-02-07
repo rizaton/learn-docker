@@ -161,3 +161,8 @@ docker container create --name multi -p 8080:8080 rizaton/multi
 docker container start multi
 
 docker container inspect multi
+
+# Docker push
+docker login -u rizaton
+
+docker push rizaton/multi

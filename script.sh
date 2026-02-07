@@ -166,3 +166,10 @@ docker container inspect multi
 docker login -u rizaton
 
 docker push rizaton/multi
+
+# Docker push custom repository - Digital Ocean
+docker tag rizaton/multi registry.digitalocean.com/rizaton/multi
+
+docker --config /Users/rizaton/.docker-digital-ocean/ push registry.digitalocean.com/rizaton/multi
+
+docker --config /Users/rizaton/.docker-digital-ocean/ pull registry.digitalocean.com/rizaton/multi

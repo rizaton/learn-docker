@@ -1,0 +1,7 @@
+services:
+  nginx-example:
+    image: nginx:latest
+    container_name: nginx-example
+  golang-example:
+    image: golang:alpine3.23
+    container_name: golang-example

@@ -1,0 +1,16 @@
+firstName: Riza
+middleName: Iza
+lastName: Ton
+hobbies:
+  - Coding
+  - Reading
+  - Gaming
+address:
+  street: Jakarta
+  city: DKI Jakarta
+  country: Indonesia
+wallet:
+  - type: digital
+    amount: 10000
+  - type: cash
+    admoun: 50

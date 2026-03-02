@@ -1,0 +1,33 @@
+volumes:
+  mongo-data1:
+    name: mongo-data1
+  mongo-data2:
+    name: mongo-data2
+
+services:
+  mongodb-example1:
+    image: mongo:latest
+    container_name: mongodb_example_mount1
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: pass
+      MONGO_INITDB_DATABASE: admin
+    volumes:
+      - "mongo-data1:/data/db"
+
+  mongodb-example2:
+    image: mongo:latest
+    container_name: mongodb_example_mount2
+    ports:
+      - "27018:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: pass
+      MONGO_INITDB_DATABASE: admin
+    volumes:
+      - type: volume
+        source: mongo-data2
+        target: "/data/db"
+        read_only: false
